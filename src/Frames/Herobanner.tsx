@@ -13,10 +13,12 @@ export default function Herobanner() {
 
   useLayoutEffect(() => {
     const tl = gsap.timeline({
-      repeat: 2,
+      repeat: -1,
       delay: 1,
       defaults: { duration: 0.7, ease: Power3.easeOut },
     });
+
+    tl.set(chatRef.current, { opacity: 0 });
 
     tl.to(chienRef.current, {
       yPercent: 10,
@@ -27,18 +29,21 @@ export default function Herobanner() {
       {
         yPercent: 20,
         opacity: 0,
-      }
-      // ">+=1"
+      },
+      ">+=1"
     );
     tl.to(chatRef.current, {
       yPercent: 10,
       opacity: 1,
     });
-    tl.to(chatRef.current, {
-      yPercent: 20,
-      opacity: 0,
-    });
-    tl.progress(0);
+    tl.to(
+      chatRef.current,
+      {
+        yPercent: 20,
+        opacity: 0,
+      },
+      ">+=1"
+    );
   }, []);
   return (
     <div id="Herobanner" className="flex-column justify-center relative">
