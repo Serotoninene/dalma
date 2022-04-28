@@ -1,0 +1,16 @@
+.Button {
+  padding: 11px 20px;
+  font-size: 16px;
+  background-color: $purple;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  display: block;
+  transition: background-color ease-out 0.2s;
+}
+
+.Button:hover {
+  background-color: $dark !important;
+  color: white !important;
+}

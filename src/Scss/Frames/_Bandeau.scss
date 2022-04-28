@@ -1,0 +1,15 @@
+#Bandeau {
+  background-color: $purple;
+  height: 143px;
+
+  .sponsor {
+    margin: 0 100px;
+    img {
+      height: 40px;
+    }
+  }
+
+  .icon {
+    width: 30px;
+  }
+}
